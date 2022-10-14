@@ -1,0 +1,25 @@
+.soundbar {
+    color: #19bef1;
+    font-size: 25px;
+    position: absolute;
+    right: 5%;
+    bottom: 10px;
+    opacity: 0.6;
+    transition: transform 300ms;
+    z-index: 999;
+
+
+    &:hover,
+    &:after {
+        cursor: pointer;
+        transform: scale(1.2);
+        color: white;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .soundbar {
+        right: 2%;
+    }    
+}

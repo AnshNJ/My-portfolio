@@ -1,0 +1,130 @@
+@media screen and (max-width:900) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.home-page {
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+    
+    }
+
+    h1 {
+        color: white;
+        font-size: 53px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+
+        &::before {
+            content: '<h1>';
+            font-family: 'La Belle Aurore';
+            color: #19bef1;
+            font-size: 18px;
+            position: absolute;
+            margin-top: -40px;
+            top: 20px;
+            opacity: 0.6;
+        }
+
+        &::after {
+            content: '<h1/>';
+            font-family: 'La Belle Aurore';
+            color: #19bef1;
+            font-size: 18px;
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 20px;
+            animation: fadeIn 1s 1.7s backwards;
+            opacity: 0.6;
+        }
+
+        img {
+            width: 32px;
+            margin-left: 20px;
+            opacity: 0;
+            height: auto;
+            animation: rotateIn 1s linear both;
+            animation-delay: 1.4s;
+        }   
+    }
+
+    h2 {
+        color: #d7cece;
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 12px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        animation: fadeIn 1s 1.8s backwards;
+    }
+
+    .flat-button {
+        color: #19bef1;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid #19bef1;
+        margin-top: 25px;
+        float: left;
+        animation: fadeIn 1s 1.8s backwards;
+        white-space: nowrap;
+
+
+        &:hover {
+            background: #19bef1;
+            color: #333;
+            transition: 500ms;
+            font-weight: 300;
+            box-shadow: 0 2px 25px #0ff;
+            
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+  
+    .home-page {
+        .text-zone {
+            position: initial;
+            margin-top: calc( 100% - 75%);
+            height: 100vh;
+            width: 100%;
+            padding: 0 30px 0 30px;
+            transform: none;
+            box-sizing: border-box;
+            text-align: center;
+
+
+            h1 {
+
+                letter-spacing: 3px;
+
+                &::before,
+                &::after {
+                    visibility: hidden;
+                }
+            }
+        }
+
+        .flat-button {
+            float: none;
+            display: block;
+            margin: 50px auto 0 auto;
+            width: 125px;
+        }
+
+        
+    }    
+  }

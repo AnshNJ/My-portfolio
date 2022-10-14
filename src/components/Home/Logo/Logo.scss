@@ -1,0 +1,55 @@
+@media screen and (max-width: 950px) {
+  .logo-container {
+    visibility: hidden;
+  }
+}
+
+.logo-container {
+  z-index: 0;
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: -5%;
+  right: 7%;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+  opacity: 0.8;
+  z-index: -1;
+ 
+
+  .solid-logo {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    opacity: 0.8;
+    z-index: 1; 
+    animation: fadeIn 3s 2s;
+    animation-fill-mode: backwards;
+  } 
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 40px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
