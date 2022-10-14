@@ -20,8 +20,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 function Sidebar() {
-  const [width, setWidth] = useState(window.innerWidth)
-  const breakpoint = 700
   const [showNav, setShowNav] = useState(false)
 
   // useEffect(() => {
@@ -47,7 +45,7 @@ function Sidebar() {
         <nav className={showNav ? 'mobile-nav' : ''}>
           <NavLink
             onClick={() => setShowNav(false)}
-            exact
+            exact={true}
             activeclassname="active"
             to="/"
           >

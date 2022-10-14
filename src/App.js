@@ -14,7 +14,7 @@ function App() {
   return (
     <Fragment>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route exact path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='skills' element={<Skills />} />
